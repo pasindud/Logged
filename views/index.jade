@@ -1,0 +1,62 @@
+extends layout
+
+
+block content
+
+  .container
+    .row
+        .span12
+          .navbar.navbar-inverse
+            .navbar-inner
+              .container
+                  ul.nav
+                    li 
+                      a Logged
+                    li 
+                      a(href='#myModal', role='button', data-toggle='modal') More Info
+                  ul.nav.pull-right
+                    li
+                      a(href="http://pasindu.us" , target="_blank") Done By | Pasindu De Silva
+    p#posturl 
+      b Note POST the logs to this URL
+    .row
+      .span2
+        
+        h3 Actions
+        a.btn.btn-block.btn-danger(onclick='flush()') Flush logs
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <hr class="span12">
+      .span12
+        h3
+        s
+          table.table.table-striped.table-bordered(id="logs",style="width:100%;")
+            thead
+              tr
+                th Logs
+                th Time
+                th Level
+            tbody
+
+  //
+       Modal 
+    #myModal.modal.hide.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h3#myModalLabel More Info
+      .modal-body
+        p Post your logs to this current URL
+        <br>
+        p Post a JSON like below
+        <pre> {
+        <br>    log:" { your log details } " ,
+        <br>    time:"the log time here",
+        <br>    level : " log level INFO || WARNING  "
+        <br>  }
+        </pre>
+      .modal-footer
+        button.btn(data-dismiss='modal', aria-hidden='true') Close
+ 

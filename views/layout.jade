@@ -1,0 +1,28 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='stylesheets/bootstrap.css')
+
+    script(src="/socket.io/socket.io.js")
+    script(src='/javascripts/jquery.min.js')
+
+    script(src="/javascripts/datatable.js")
+    script(src="/javascripts/logged.js")
+    script(src="/javascripts/bootstrap-modal.js")
+
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/stylesheets/flat-ui.css')
+
+    script
+        var gid='#{logid}';
+        var parser = document.createElement('a');
+        parser.href =document.URL;
+         var socket = io.connect(parser.protocol+"//"+parser.host);
+  
+         socket.on('broadcast_#{logid}', function (data) {
+            addlog(data);
+         });
+    script
+  body
+    block content
