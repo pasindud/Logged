@@ -5,7 +5,7 @@ Logged is a realtime Log monitor tool | web app for a log stream, NO Databases ,
 
 Live on - [http://logged.herokuapp.com](http://logged.herokuapp.com)
 
-You can also browse to  http://logged.herokuapp.com/_soemthing_ to make your own custom path
+You can also browse to  http://logged.herokuapp.com/_something_ to make your own custom path
 ***
 ####POST the following JSON to the mentioned URL to view the logs 
 
@@ -25,6 +25,8 @@ You can also browse to  http://logged.herokuapp.com/_soemthing_ to make your own
 * [Socket.io](http://socket.io/) - Library for realtime applications
 * [Datatables](http://datatables.net/) - Library for sortable, paging and searchable tables
 ***
+
+
 ####Installation & Setup
 This assumes you already have node.js & npm installed.
 
