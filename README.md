@@ -3,7 +3,7 @@
 
 Logged is a realtime Log monitor tool | web app for a log stream, NO Databases , just push  and it will work. Can be used to debug programs, the url can be shared with anyone to watch incomming logs.
 
-Live is on - [http://logged.herokuapp.com](http://logged.herokuapp.com)
+Live on - [http://logged.herokuapp.com](http://logged.herokuapp.com)
 
 You can also browse to  http://logged.herokuapp.com/_soemthing_ to make your own custom path
 ***
