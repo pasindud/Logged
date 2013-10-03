@@ -37,6 +37,29 @@ npm install
 node app
 browse to http://localhost:3000 || Or the port shown on the console
 ```
+
+
+####Sample PHP Log Code
+
+    <?php
+    
+         $log=array("log"=>"Logges Here","level"=>"1002","time"=>"12.1002");
+
+         sendrequestLogged( json_encode($log));
+  
+         function sendrequestLogged($jsonstream){
+             $ch = curl_init("http://logged.herokuapp.com/1001");
+             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+             curl_setopt($ch, CURLOPT_POST, 1);
+             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+             curl_setopt($ch, CURLOPT_POSTFIELDS,$jsonstream);
+             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+             $res = curl_exec($ch);
+             curl_close($ch);
+          }
+         
+    ?>
+
 ****
 Tested on Firefox 22v and Chrome 27v
 ***
